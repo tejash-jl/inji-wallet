@@ -6,6 +6,7 @@ import {Theme} from '../components/ui/styleUtils';
 import {RootRouteProps} from '../routes';
 import {useWelcomeScreen} from './WelcomeScreenController';
 import {SvgImage} from '../components/ui/svg';
+import {Image} from 'react-native-elements';
 
 export const WelcomeScreen: React.FC<RootRouteProps> = props => {
   const {t} = useTranslation('WelcomeScreen');
@@ -16,7 +17,11 @@ export const WelcomeScreen: React.FC<RootRouteProps> = props => {
       padding="32 32 0"
       backgroundColor={Theme.Colors.whiteBackgroundColor}>
       <HorizontallyCentered fill>
-        {SvgImage.InjiLogo(Theme.Styles.welcomeLogo)}
+        <Image
+          resizeMode="stretch"
+          style={{width: 250, height: 80}}
+          source={require('../assets/tt_logo.png')}
+        />
       </HorizontallyCentered>
       <Button
         testID="unlockApplication"

@@ -10,7 +10,7 @@ import {HomeScreen} from './Home/HomeScreen';
 import {IssuersScreen} from './Issuers/IssuersScreen';
 import {SvgImage} from '../components/ui/svg';
 import {HelpScreen} from '../components/HelpScreen';
-import {I18nManager, View} from 'react-native';
+import {I18nManager, Image, View} from 'react-native';
 import {isIOS} from '../shared/constants';
 import {Copilot} from '../components/ui/Copilot';
 
@@ -70,9 +70,15 @@ export const HomeScreenLayout: React.FC<RootRouteProps> = props => {
 
   var HomeScreenOptions = {
     headerLeft: () =>
-      isIOS() || !isRTL
-        ? SvgImage.InjiLogo(Theme.Styles.injiLogo)
-        : screenOptions,
+      isIOS() || !isRTL ? (
+        <Image
+          resizeMode="stretch"
+          style={{width: 140, height: 40}}
+          source={require('../assets/tt_logo.png')}
+        />
+      ) : (
+        screenOptions
+      ),
     headerTitle: '',
     headerRight: () =>
       isIOS() || !isRTL

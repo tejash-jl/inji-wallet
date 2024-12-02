@@ -158,5 +158,8 @@ export const getScreenHeight = () => {
 };
 
 export const getMosipIdentifier = (credentialSubject: CredentialSubject) => {
+  console.log('credentialSubject.UIN');
+  console.log(credentialSubject.UIN);
+  console.log(credentialSubject.VID);
   return credentialSubject.UIN ? credentialSubject.UIN : credentialSubject.VID;
 };

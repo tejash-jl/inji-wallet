@@ -46,7 +46,6 @@ export const VCCardViewContent: React.FC<VCItemContentProps> = props => {
   const {start} = useCopilot();
   const {t} = useTranslation();
 
-
   return (
     <ImageBackground
       source={getBackgroundImage(props.wellknown, Theme.CloseCard)}
@@ -69,7 +68,7 @@ export const VCCardViewContent: React.FC<VCItemContentProps> = props => {
               key={'fullName'}
               testID="fullName"
               fieldValue={getLocalizedField(
-                props.credential?.credentialSubject['fullName'],
+                props.credential?.credentialSubject['studentName'],
               )}
               wellknown={props.wellknown}
             />

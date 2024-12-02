@@ -32,11 +32,12 @@ export const SplashScreen: React.FC<RootRouteProps> = props => {
         justifyContent: 'center',
         height: Dimensions.get('screen').height,
         width: Dimensions.get('screen').width,
+        backgroundColor: 'white',
       }}>
       <Image
         resizeMode="stretch"
-        style={{width: 250, height: 150}}
-        source={imageResource}
+        style={{width: 250, height: 80}}
+        source={require('../assets/tt_logo.png')}
       />
     </Column>
   );
