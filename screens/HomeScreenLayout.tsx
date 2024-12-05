@@ -74,7 +74,7 @@ export const HomeScreenLayout: React.FC<RootRouteProps> = props => {
         <Image
           resizeMode="stretch"
           style={{width: 140, height: 40}}
-          source={require('../assets/mobile_wallet_inji.png')}
+          source={require('../assets/tt_logo.png')}
         />
       ) : (
         screenOptions
